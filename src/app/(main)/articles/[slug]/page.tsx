@@ -12,7 +12,7 @@ import {
 } from "@/components/articles";
 
 // Custom MDX
-import { CustomMDX } from "@/mdx-components";
+import { CustomMDX } from "@/components/mdx-components";
 
 // Constants
 import { BRAND_ID } from "@/constants";

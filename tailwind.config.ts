@@ -81,5 +81,5 @@ export default {
   },
 
   // eslint-disable-next-line @typescript-eslint/no-require-imports
-  plugins: [animate, require("tailwindcss-motion"), require("tailwindcss-intersect")],
+  plugins: [animate, require("tailwindcss-motion"), require("tailwindcss-intersect"), require("@tailwindcss/typography")],
 } satisfies Config;

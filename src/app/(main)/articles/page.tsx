@@ -69,8 +69,8 @@ export default async function ArticlesPage() {
         <div className="relative px-4 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-2xl lg:max-w-5xl flex flex-col flex-grow">
             <header className="mx-2 md:mx-0 md:max-w-[39rem] motion-ease-in motion-delay-[0ms] motion-duration-[500ms] motion-blur-in-sm">
-              <h1 className="text-4xl font-bold tracking-tighter text-zinc-800 dark:text-zinc-100 leading-[2.75rem] sm:leading-[3.5rem]">{ARTICLES_TITLE}</h1>
-              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 leading-7 mr-4"> {ARTICLES_DESC}</p>
+              <h1 className="text-3xl md:text-4xl font-bold tracking-tighter text-zinc-800 dark:text-zinc-100 leading-[2.75rem] sm:leading-[3.5rem]">{ARTICLES_TITLE}</h1>
+              <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 tracking-tighter leading-7 mr-4"> {ARTICLES_DESC}</p>
             </header>
             <ArticlesListClient articles={articleObjects} tags={tagObjects} />
           </div>

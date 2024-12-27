@@ -20,7 +20,7 @@ export function ArticleHeader({ title, author, date, mainTagName, mainTagSlug }:
 
   return (
     <header className="mb-2 lg:mb-6 not-format ">
-      <h1 className="mb-6 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 lg:mb-8 lg:text-5xl dark:text-white motion-ease-in">
+      <h1 className="mb-6 text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-gray-900 lg:mb-8 lg:text-5xl dark:text-white motion-ease-in">
         {title}
       </h1>
       <div className="flex items-center space-x-4 lg:space-x-3 text-base text-gray-600 dark:text-gray-400 motion-ease-in">
