@@ -159,6 +159,8 @@ export const VENTURES: Venture[] = [
 // ARTICLES
 
 export const ARTICLES_TITLE = "Writing on artificial intelligence, product design, and just about anything I find interesting.";
+export const ARTICLES_MOBILE_TITLE = "Writing on AI, product design, and just about anything I find interesting.";
+
 export const ARTICLES_DESC = "My reflections on the art of building — from AI and design, to the curiosities that shape my journey.";
 // -----------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------
