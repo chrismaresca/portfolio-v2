@@ -28,9 +28,9 @@ export default function ProjectCard({ title, subtitle, projectUrl, target, dateU
       </div>
       <div className="flex flex-col items-end gap-2 ml-4 flex-shrink-0 mt-1">
         <div className="text-muted-foreground text-xs whitespace-nowrap tracking-tighter">{formatDate(dateUpdated)}</div>
-        <Button asChild variant="link" className="p-0 mt-1 h-auto text-xs md:text-sm">
+        <Button asChild variant="link" className="p-0 mt-1 h-auto text-[10px] md:text-sm">
           <Link href={projectUrl} target={target}>
-            {PROJECT_CTA} <ArrowRightIcon className="w-4 h-4 ml-1" />
+            {PROJECT_CTA} <ArrowRightIcon className="!w-3.5 !h-3.5 md:!w-4 md:!h-4 !ml-0" />
           </Link>
         </Button>
       </div>
