@@ -68,7 +68,7 @@ const About = () => {
 
         {/* Start Fourth Section */}
         <div className="xl:col-span-2 xl:row-span-3">
-          <div className="h-full w-full intersect-once intersect:motion-preset-blur-up motion-ease-in motion-duration-1000 motion-delay-[0.9s]" id="contact">
+          <div className="h-full w-full intersect-once intersect:motion-preset-blur-up motion-ease-in motion-duration-1000 motion-delay-[0.65s]" id="contact">
             <div className="bento-container-outer">
               <div className="bento-container-inner">
                 {/* Globe Component */}

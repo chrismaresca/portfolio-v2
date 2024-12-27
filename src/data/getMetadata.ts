@@ -11,9 +11,7 @@ import { BrandMetadata, TagMetadata } from "@/types";
  * @returns {Promise<Metadata>} A promise that resolves to the metadata for the brand.
  */
 export async function getBrandMetadata(brandId: string): Promise<Metadata> {
-  const metadataObject: BrandMetadata = await fetch(`${POSTS_API_BASE_URL}/api/metadata/brands/${brandId}`).then(
-    (response) => response.json()
-  );
+  const metadataObject: BrandMetadata = await fetch(`${POSTS_API_BASE_URL}/api/metadata/brands/${brandId}`).then((response) => response.json());
 
   const keywords = metadataObject.tags?.map((tag: { tag: { name: string } }) => tag.tag.name);
 
@@ -67,9 +65,7 @@ export async function getBrandMetadata(brandId: string): Promise<Metadata> {
  * @returns {Promise<Metadata>} A promise that resolves to the metadata for the tag.
  */
 export async function getTagMetadataBySlug(slug: string): Promise<Metadata> {
-  const metadataObject: TagMetadata = await fetch(`${POSTS_API_BASE_URL}/api/metadata/tags/${slug}`).then((response) =>
-    response.json()
-  );
+  const metadataObject: TagMetadata = await fetch(`${POSTS_API_BASE_URL}/api/metadata/tags/${slug}`).then((response) => response.json());
 
   const tagMetadata: Metadata = {
     title: metadataObject.name,
@@ -92,4 +88,3 @@ export async function getTagMetadataBySlug(slug: string): Promise<Metadata> {
 
 // =====================================================================================================
 // =====================================================================================================
-
