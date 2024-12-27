@@ -1,5 +1,7 @@
 // Next Imports
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/next';
+
 
 // Fonts
 import { Geist, Geist_Mono } from "next/font/google";
@@ -47,6 +49,7 @@ export default function RootLayout({
             {children}
             <MainFooter />
           </main>
+          <Analytics />
         </body>
       </ObserverProvider>
     </html>

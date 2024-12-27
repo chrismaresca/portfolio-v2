@@ -15,6 +15,10 @@ export async function getBrandMetadata(brandId: string): Promise<Metadata> {
 
   const keywords = metadataObject.tags?.map((tag: { tag: { name: string } }) => tag.tag.name);
 
+  const ogImageUrl = metadataObject.ogImageUrl ? metadataObject.ogImageUrl : undefined;
+
+  const ogImages = ogImageUrl ? [{ url: ogImageUrl, alt: metadataObject.name, width: 1200, height: 630 }] : undefined;
+
   const brandMetadata: Metadata = {
     metadataBase: new URL(metadataObject.websiteUrl),
     alternates: {
@@ -36,7 +40,7 @@ export async function getBrandMetadata(brandId: string): Promise<Metadata> {
     openGraph: {
       title: metadataObject.name,
       description: metadataObject.description,
-      images: metadataObject.ogImageUrl ? [metadataObject.ogImageUrl] : undefined,
+      images: ogImages,
       url: metadataObject.websiteUrl,
       siteName: metadataObject.name,
       type: "website",
@@ -47,7 +51,7 @@ export async function getBrandMetadata(brandId: string): Promise<Metadata> {
       card: "summary",
       title: metadataObject.name,
       description: metadataObject.description,
-      images: metadataObject.ogImageUrl ? [metadataObject.ogImageUrl] : undefined,
+      images: ogImages,
       site: `@${metadataObject.twitterHandle}`,
       creator: metadataObject.founder,
     },
