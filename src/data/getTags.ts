@@ -17,7 +17,11 @@ export async function fetchTagsByBrand(brandId: string): Promise<TagResponse> {
     throw new Error("Environment variables POSTS_API_BASE_URL and BRAND_ID must be defined.");
   }
 
-  const tags = await fetch(`${POSTS_API_BASE_URL}/api/tags?where[brandId][equals]=${BRAND_ID}`);
+  const tags = await fetch(`${POSTS_API_BASE_URL}/api/tags?where[brandId][equals]=${BRAND_ID}`, {
+    next: {
+      revalidate: 1800,
+    },
+  });
 
   if (!tags.ok) {
     throw new Error(`Failed to fetch tags: ${tags.statusText}`);

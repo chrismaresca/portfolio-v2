@@ -7,6 +7,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 // Global Styles
 import "./globals.css";
 import { getBrandMetadata } from "@/data/getMetadata";
+import MainNavbar from "@/sections/MainNavbar";
+import MainFooter from "@/sections/MainFooter";
+import ObserverProvider from "@/lib/ObserverProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +30,6 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const brandMetadata = await getBrandMetadata(brandId);
 
-
   return brandMetadata;
 }
 
@@ -38,7 +40,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark bg-background font-mono`}>{children}</body>
+      <ObserverProvider>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark bg-background font-mono`}>
+          <main className="max-w-7xl mx-auto">
+            <MainNavbar />
+            {children}
+            <MainFooter />
+          </main>
+        </body>
+      </ObserverProvider>
     </html>
   );
 }

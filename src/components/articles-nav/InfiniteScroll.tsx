@@ -15,7 +15,7 @@ const InfiniteScroll = ({ currentPage, handleNextPage }: InfiniteScrollProps) =>
     if (inView) {
       handleNextPage();
     }
-  }, [inView, currentPage]);
+  }, [inView, currentPage, handleNextPage]);
 
   return (
     <div role="status" ref={ref} className="flex justify-center">

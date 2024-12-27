@@ -1,6 +1,6 @@
 // Website Content Constants
 
-import { WORK_WITH_ME_URL } from "@/constants";
+import { WORK_WITH_ME_URL } from "@/constants/social";
 
 // Copyright Year
 export const COPYRIGHT_YEAR = "2024";
@@ -31,7 +31,7 @@ export const DEFAULT_METADATA = {
 
 // -----------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------
-// Nav Link Types
+// Nav Link Type
 export type NavLink = {
   name: string;
   href: string;
@@ -39,7 +39,7 @@ export type NavLink = {
 };
 
 // Nav Links
-export const navLinks: NavLink[] = [
+export const navItems: NavLink[] = [
   {
     name: "About",
     href: "/#about",

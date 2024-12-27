@@ -5,7 +5,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 
 // Constants
-import { navLinks, NavLink } from "../constants";
+import { navItems, NavLink } from "@/constants/website";
 
 // Use Scramble
 import { useScramble } from "use-scramble";
@@ -17,16 +17,8 @@ import { Menu, X } from "lucide-react";
 // -----------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------
-// Nav Items
-interface NavItemProps {
-  name: string;
-  href: string;
-  target?: string;
-}
 
-const NavItem = ({ name, href, target }: NavItemProps) => {
-
-
+const NavItem = ({ name, href, target }: NavLink) => {
   return (
     <li className="nav-li">
       <a href={href} className="text-neutral-400 hover:text-white transition-colors nav-li_a" target={target}>
@@ -97,14 +89,14 @@ export default function MainNavbar() {
           </button>
 
           <nav className="sm:flex hidden">
-            <NavItems navLinks={navLinks} />
+            <NavItems navLinks={navItems} />
           </nav>
         </div>
       </div>
 
       <div className={`nav-sidebar ${isOpen ? "max-h-screen" : "max-h-0"}`}>
         <nav className="p-5">
-          <NavItems navLinks={navLinks} />
+          <NavItems navLinks={navItems} />
         </nav>
       </div>
     </header>

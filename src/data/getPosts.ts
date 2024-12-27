@@ -25,6 +25,9 @@ export async function fetchArticlesByBrand(brandId: string): Promise<ArticleResp
     headers: {
       "Content-Type": "application/json",
     },
+    next: {
+      revalidate: 1800,
+    },
   });
 
   if (!response.ok) {
