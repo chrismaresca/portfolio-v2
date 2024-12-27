@@ -1,6 +1,7 @@
 // Website Content Constants
 
 import { WORK_WITH_ME_URL } from "@/constants/social";
+import { Project } from "@/types";
 
 // Copyright Year
 export const COPYRIGHT_YEAR = "2024";
@@ -48,6 +49,11 @@ export const navItems: NavLink[] = [
   {
     name: "Articles",
     href: "/articles",
+    target: "_self",
+  },
+  {
+    name: "Projects",
+    href: "/projects",
     target: "_self",
   },
   {
@@ -192,6 +198,108 @@ export const ARTICLES_DEFAULT_METADATA = {
 // -----------------------------------------------------------------------------------// -----------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------// -----------------------------------------------------------------------------------
 // -----------------------------------------------------------------------------------
-// ARTICLE PAGE
+// PROJECTS INFO
+
+export const PROJECTS_TITLE = "The Playground of Ideas";
+export const PROJECTS_MOBILE_TITLE = "The Playground of Ideas";
+export const PROJECTS_DESC = "A dedicated space for my curiosities, experiments, and challenges.";
+export const PROJECT_CTA = "Visit Project";
+
+// PROJECTS DEFAULT METADATA
+export const PROJECTS_DEFAULT_METADATA = {
+  title: PROJECTS_TITLE,
+  description: PROJECTS_DESC,
+  openGraph: {
+    title: PROJECTS_TITLE,
+    description: PROJECTS_DESC,
+    url: DEFAULT_ARTICLES_METADATA_URL,
+  },
+};
+
+// PROJECTS
+
+export const PROJECTS: Project[] = [
+  {
+    id: 1,
+    title: "AI First CMS Platform",
+    subtitle: "A unified dashboard and REST API built with Next.js to centralize management of my professional social media accounts and article writing. It features advanced information retrieval and AI-driven content draft generation powered by custom agentic workflows hosted securely on AWS Lambda. Designed for infinite scalability, it supports unlimited brands, users, and content.",
+    projectUrl: "https://github.com/chrismaresca/AI-CMS-API-LIVE",
+    target: "_blank",
+    dateCreated: new Date("2024-12-20"),
+    dateUpdated: new Date("2024-12-27"),
+    delay: 0,
+  },
+  {
+    id: 2,
+    title: "Architects.dev",
+    subtitle: "A landing page for my AI consultancy business that I'm launching with a fellow engineer, built from scratch within a couple of hours using Next.js, Tailwind CSS, Framer Motion, and Rombo's Tailwind motion library.",
+    projectUrl: "https://www.architects.dev/",
+    target: "_blank",
+    dateCreated: new Date("2024-12-18"),
+    dateUpdated: new Date("2024-12-24"),
+    delay: 100,
+  },
+  {
+    id: 3,
+    title: "Twilio Realtime Phone Assistant",
+    subtitle: "A Twilio Phone Assistant leveraging OpenAI's Real-Time Assistant API to deliver immediate and context-aware responses to user requests through live phone conversations. The system is built with FastAPI to manage the API layer and Twilio for seamless call handling. It features an integrated audio buffer to improve interaction quality and manage interruptions effectively, ensuring a smoother user experience. This project demonstrates the potential of combining robust API design with real-time conversational AI.",
+    projectUrl: "https://github.com/chrismaresca/twilio-realtime",
+    target: "_blank",
+    dateCreated: new Date("2024-11-30"),
+    dateUpdated: new Date("2024-12-05"),
+    delay: 200,
+  },
+  {
+    id: 4,
+    title: "Simple LLM Workflow",
+    subtitle: "Processes meeting transcripts and AI-generated notes (via CircleBack.ai) to automatically produce tailored slide deck content using an efficient LlamaIndex pipeline. Built with FastAPI and Jinja2 templates (for fun), it delivers a simple way for anyone to get slide content from a meeting in minutes.",
+    projectUrl: "https://github.com/chrismaresca/simpleLLMworkflow",
+    target: "_blank",
+    dateCreated: new Date("2024-11-15"),
+    dateUpdated: new Date("2024-11-22"),
+    delay: 300,
+  },
+  {
+    id: 5,
+    title: "Jarvis v2",
+    subtitle: "A CLI tool that lets you control your computer with your voice using the OpenAI Real-Time API. It’s designed for workflows like running shell commands, web scraping, and file creation, with a basic structure in place to add even more tools in future versions. It also features the same audio buffer mechanism I developed for the Twilio Phone Assistant, making voice interactions smooth when the human decides to interrupt the AI agent.",
+    projectUrl: "https://github.com/chrismaresca/jarvis-v2",
+    target: "_blank",
+    dateCreated: new Date("2024-10-25"),
+    dateUpdated: new Date("2024-10-30"),
+    delay: 400,
+  },
+  {
+    id: 6,
+    title: "Knowledge Microservices Example",
+    subtitle: "An example of a FastAPI Microservices Architecture that uses Redis as the message broker, enabling users to create flexible public or private knowledge repositories for RAG workflows. Supports both Pinecone for embedding-based knowledge repositories and Neo4j for graph-based repositories. Configured with a lightweight CI/CD pipeline, it serves as a reusable and scalable template for quickly deploying containerized FastAPI microservices.",
+    projectUrl: "https://github.com/chrismaresca/knowledge-micro-ex",
+    target: "_blank",
+    dateCreated: new Date("2024-10-10"),
+    dateUpdated: new Date("2024-11-21"),
+    delay: 500,
+  },
+  {
+    id: 7,
+    title: "Continue Package Manager",
+    subtitle: "A challenge that required me to build a basic package manager in 2 hours with Node.js and implement two commands: add (to add a package) and install (to install all packages). Decided to use a depth-first-search traversal algorithm for dependency management.",
+    projectUrl: "https://github.com/chrismaresca/continue-package-manager",
+    target: "_blank",
+    dateCreated: new Date("2024-09-25"),
+    dateUpdated: new Date("2024-09-28"),
+    delay: 600,
+  },
+  {
+    id: 8,
+    title: "SaaS Landing Page with Framer Motion",
+    subtitle: "An illustrative SaaS landing page I built to explore Framer Motion scroll animations and demonstrate smooth user interaction concepts.",
+    projectUrl: "https://sass-lp-ex2.vercel.app/",
+    target: "_blank",
+    dateCreated: new Date("2024-09-15"),
+    dateUpdated: new Date("2024-09-16"),
+    delay: 700,
+  },
+];
+
 
 // export const LOCATION_

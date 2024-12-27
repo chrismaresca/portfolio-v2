@@ -2,9 +2,8 @@
 import type { Metadata } from "next";
 
 // Analytics and Speed Insights
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Fonts
 import { Geist, Geist_Mono } from "next/font/google";
@@ -44,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ObserverProvider>
+    <ObserverProvider>
+      <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark bg-background font-mono`}>
           <main className="max-w-7xl mx-auto">
             <MainNavbar />
@@ -55,7 +54,7 @@ export default function RootLayout({
           <Analytics />
           <SpeedInsights />
         </body>
-      </ObserverProvider>
-    </html>
+      </html>
+    </ObserverProvider>
   );
 }
