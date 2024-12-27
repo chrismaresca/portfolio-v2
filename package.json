@@ -40,8 +40,5 @@
     "three": "0.168.0",
     "typescript": "^5.7.2"
   },
-  "engines": {
-    "node": ">=20.17.10",
-    "pnpm": ">=9.1.0"
-  }
+  "packageManager": "pnpm@9.1.0"
 }
