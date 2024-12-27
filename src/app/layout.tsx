@@ -1,6 +1,9 @@
 // Next Imports
 import type { Metadata } from "next";
+
+// Analytics and Speed Insights
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 
 // Fonts
@@ -50,6 +53,7 @@ export default function RootLayout({
             <MainFooter />
           </main>
           <Analytics />
+          <SpeedInsights />
         </body>
       </ObserverProvider>
     </html>
