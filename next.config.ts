@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
         hostname: "yrrzp4zqlhg33gdn.public.blob.vercel-storage.com",
       },
       {
+        protocol: "https", 
+        hostname: "storage.googleapis.com",
+      },
+      {
         protocol: "https",
         hostname: "flowbite.com",
       },
