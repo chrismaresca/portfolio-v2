@@ -222,7 +222,7 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     title: "AI First CMS Platform",
-    subtitle: "A unified dashboard and REST API built with Next.js to centralize management of my professional social media accounts and article writing. It features advanced information retrieval and AI-driven content draft generation powered by custom agentic workflows hosted securely on AWS Lambda. Designed for infinite scalability, it supports unlimited brands, users, and content.",
+    subtitle: "Engineered a frontend dashboard and REST API using Next.js to centralize content creation and management with an AI-first approach. The platform includes a built-in markdown editor powered by TipTap, leveraging TipTap's AI features to capture and replicate user-specific writing styles, significantly accelerating content development. It also implements custom agentic web scrapers for knowledge retrieval and resource aggregation, streamlining the content generation process. Integrated with APIs from major blog providers (Medium, LinkedIn, Dev.to) to enable efficient distribution across multiple platforms.",
     projectUrl: "https://github.com/chrismaresca/AI-CMS-API-LIVE",
     target: "_blank",
     dateCreated: new Date("2024-12-20"),
@@ -242,7 +242,7 @@ export const PROJECTS: Project[] = [
   {
     id: 3,
     title: "Twilio Realtime Phone Assistant",
-    subtitle: "A Twilio Phone Assistant leveraging OpenAI's Real-Time Assistant API to deliver immediate and context-aware responses to user requests through live phone conversations. The system is built with FastAPI to manage the API layer and Twilio for seamless call handling. It features an integrated audio buffer to improve interaction quality and manage interruptions effectively, ensuring a smoother user experience. This project demonstrates the potential of combining robust API design with real-time conversational AI.",
+    subtitle: "Developed a Twilio Phone Assistant powered by OpenAI's Real-Time Assistant API to deliver immediate, context-aware responses during live phone conversations. The system is built with FastAPI to handle the API layer and Twilio for seamless call management. Implemented an integrated audio buffer to enhance interaction quality and effectively manage interruptions, improving the overall user experience.",
     projectUrl: "https://github.com/chrismaresca/twilio-realtime",
     target: "_blank",
     dateCreated: new Date("2024-11-30"),
@@ -252,7 +252,7 @@ export const PROJECTS: Project[] = [
   {
     id: 4,
     title: "Simple LLM Workflow",
-    subtitle: "Processes meeting transcripts and AI-generated notes (via CircleBack.ai) to automatically produce tailored slide deck content using an efficient LlamaIndex pipeline. Built with FastAPI and Jinja2 templates (for fun), it delivers a simple way for anyone to get slide content from a meeting in minutes.",
+    subtitle: "Developed an automated pipeline for generating tailored slide deck content from meeting transcripts and AI-generated notes (via Circleback.ai). Leveraged LlamaIndex with Pydantic output parsing, implemented prior to OpenAI's structured output response model. Built with FastAPI and Jinja2 templates for prompt templating, the system enables efficient slide content generation. The use of Jinja2 allows for highly flexible prompt injection, offering extensive customization to adapt outputs to specific requirements.",
     projectUrl: "https://github.com/chrismaresca/simpleLLMworkflow",
     target: "_blank",
     dateCreated: new Date("2024-11-15"),
@@ -262,7 +262,7 @@ export const PROJECTS: Project[] = [
   {
     id: 5,
     title: "Jarvis v2",
-    subtitle: "A CLI tool that lets you control your computer with your voice using the OpenAI Real-Time API. It’s designed for workflows like running shell commands, web scraping, and file creation, with a basic structure in place to add even more tools in future versions. It also features the same audio buffer mechanism I developed for the Twilio Phone Assistant, making voice interactions smooth when the human decides to interrupt the AI agent.",
+    subtitle: "Built a CLI tool that lets me control my computer with voice commands using OpenAI’s Real-Time API. It’s tailored for coding workflows like running shell commands, web scraping documentation, and saving it in an AI-friendly markdown format, as well as file and directory creation. Designed with a modular structure, it’s ready for adding more tools in future iterations. I also integrated the audio buffer mechanism from my Twilio Phone Assistant, ensuring smooth and responsive voice interactions, even when I interrupt the AI mid-task.",
     projectUrl: "https://github.com/chrismaresca/jarvis-v2",
     target: "_blank",
     dateCreated: new Date("2024-10-25"),
