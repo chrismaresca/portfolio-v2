@@ -1,5 +1,5 @@
 // React and Next Imports
-import React from "react";
+import React, { Suspense } from "react";
 import { Metadata } from "next";
 
 // Constants
@@ -73,7 +73,9 @@ export default async function ArticlesPage() {
               <h1 className="md:hidden text-2xl max-w-[28rem] font-bold tracking-tighter text-zinc-800 dark:text-zinc-100 leading-[2.5rem]">{ARTICLES_MOBILE_TITLE}</h1>
               <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400 tracking-tighter leading-7 mr-4"> {ARTICLES_DESC}</p>
             </header>
-            <ArticlesListClient articles={articleObjects} tags={tagObjects} />
+            <Suspense fallback={<div>Loading Articles...</div>}>
+              <ArticlesListClient articles={articleObjects} tags={tagObjects} />
+            </Suspense>
           </div>
         </div>
       </div>
