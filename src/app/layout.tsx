@@ -1,6 +1,7 @@
 // Next Imports
 import type { Metadata } from "next";
 
+
 // Analytics and Speed Insights
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -14,6 +15,9 @@ import { getBrandMetadata } from "@/data/getMetadata";
 import MainNavbar from "@/sections/MainNavbar";
 import MainFooter from "@/sections/MainFooter";
 import ObserverProvider from "@/lib/ObserverProvider";
+
+// Toaster
+import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +55,7 @@ export default function RootLayout({
             {children}
             <MainFooter />
           </main>
+          <Toaster />
           <Analytics />
           <SpeedInsights />
         </body>

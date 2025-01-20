@@ -147,7 +147,7 @@ export default function ArticleListClient({ articles, tags }: ArticleListClientP
               tagName={post.tags?.[0]?.tag.name}
               slug={post.slug}
               dateUpdated={post.dateUpdated}
-              authorId={post.authorId}
+              author={post.author}
               delay={index * 100}
             />
           ))

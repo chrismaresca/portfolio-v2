@@ -8,6 +8,8 @@ import { Author } from "@/types";
 // Create Query String
 import { createQueryString } from "@/lib/createQueryString";
 
+// Components
+
 type ArticleHeaderProps = {
   title: string;
   author: Author;
@@ -15,6 +17,7 @@ type ArticleHeaderProps = {
   mainTagName: string;
   mainTagSlug: string;
 };
+
 
 export function ArticleHeader({ title, author, date, mainTagName, mainTagSlug }: ArticleHeaderProps) {
 

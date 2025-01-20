@@ -6,9 +6,8 @@ import {
   ArticleTags,
   ArticleHeader,
   ArticleAuthor,
-  FollowSocials,
   // ArticleReactions,
-  // ArticleShare
+  ArticleShare,
 } from "@/components/articles";
 
 // Custom MDX
@@ -87,7 +86,7 @@ export default async function BlogPost({ params: paramsPromise }: NextParams) {
 
   return (
     <div className="pt-8 pb-16 lg:pt-16 lg:pb-24">
-      <div className="flex justify-between px-10 lg:px-4 2xl:px-0 mx-auto max-w-screen-xl motion-preset-slide-up-sm motion-duration-[2s] motion-ease-spring-smooth">
+      <div className="flex justify-between px-10 lg:px-4 2xl:px-0 mx-auto max-w-screen-xl motion-preset-fade-sm motion-duration-[2s] motion-ease-spring-smooth">
         {/* Start Article */}
         <article className="mx-auto w-full max-w-[48rem] format format-sm sm:format-base lg:format-lg format-blue dark:format-invert font-sans">
           {/* Start Article Header */}
@@ -129,12 +128,16 @@ export default async function BlogPost({ params: paramsPromise }: NextParams) {
             </Suspense> */}
             {/* End Reactions */}
 
+            {/* Start Article Share */}
+            <ArticleShare path={`/articles/${post.slug}`} title={post.title} />
+            {/* End Article Share */}
+
             {/* Start Author */}
             <ArticleAuthor author={post.author} />
             {/* End Author */}
 
             {/* Start Follow Socials */}
-            <FollowSocials />
+            {/* <FollowSocials /> */}
             {/* End Follow Socials */}
 
             {/* Replace the Tags section with the new component */}
