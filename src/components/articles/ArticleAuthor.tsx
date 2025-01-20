@@ -27,7 +27,7 @@ export function ArticleAuthor({ author }: { author: Author }) {
   const TWITTER_URL = `https://x.com/${author.twitterHandle}`;
 
   return (
-    <Card className="px-2 py-4 mb-6 rounded-xl bg-card border dark:border-gray-700">
+    <Card className="px-2 py-4 mb-6 rounded-xl bg-card border">
       <CardHeader className="pb-4">
         <div className="flex flex-col xl:flex-row xl:items-center xl:gap-12 mb-4">
           <Link href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="flex items-center">
