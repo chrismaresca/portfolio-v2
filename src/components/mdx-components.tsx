@@ -1,12 +1,33 @@
+// React
 import React from "react";
-import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+
+// Next
 import Image from "next/image";
+
+// Utils
 import { cn } from "@/lib/utils";
 
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+// MDX Components
+import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
+
+// Rehype Plugins
+import rehypeHighlight from "rehype-highlight";
+
+// Styles
+import "@/styles/atom-one-dark.css";
+
+// Custom Components
+import { CodePre } from "@/components/articles/blocks/CodePre";
+
+// Rehype Plugins
+const options: MDXRemoteProps["options"] = {
+  mdxOptions: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypeHighlight],
+  },
+};
+
+import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
@@ -80,10 +101,10 @@ const CODE: React.FC<ComponentProps> = ({ children, className, ...props }) => (
   </code>
 );
 
-const PRE: React.FC<ComponentProps> = ({ children, className, ...props }) => (
-  <pre {...props} className={cn("!mb-4 !mt-4 overflow-x-auto rounded-lg border bg-black p-4", className)}>
-    {children}
-  </pre>
+const PRE: React.FC<ComponentProps> = ({ children, ...props }) => (
+  <div className="!my-8">
+    <CodePre {...props}>{children}</CodePre>
+  </div>
 );
 
 const TABLE: React.FC<ComponentProps> = ({ children, className, ...props }) => (
@@ -106,9 +127,7 @@ const TD: React.FC<ComponentProps> = ({ children, className, ...props }) => (
   </td>
 );
 
-const IMG: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = ({ alt, src, ...props }) => (
-  <Image {...props} alt={alt || ""} src={src || ""} width={800} height={400} className="rounded-md border !my-4" />
-);
+const IMG: React.FC<React.ImgHTMLAttributes<HTMLImageElement>> = ({ alt, src, ...props }) => <Image {...props} alt={alt || ""} src={src || ""} width={800} height={400} className="rounded-md border !my-4" />;
 
 const components = {
   h1: H1,
@@ -140,8 +159,7 @@ interface CustomMDXProps extends Omit<MDXRemoteProps, "components"> {
 export function CustomMDX({ components: userComponents, ...props }: CustomMDXProps) {
   return (
     <div className="prose dark:prose-invert max-w-none space-y-0">
-      <MDXRemote {...props} components={{ ...components, ...(userComponents || {}) }} />
+      <MDXRemote {...props} components={{ ...components, ...(userComponents || {}) }} options={options} />
     </div>
   );
 }
-
