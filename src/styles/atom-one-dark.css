@@ -28,7 +28,10 @@ hue-6-2: #e6c07b
     color: #c9d1d9;
     background: #0d1117;
 }
-  
+
+  code {
+    background: transparent !important;
+  }
   .hljs-comment,
   .hljs-quote {
     color: #5c6370;
@@ -40,7 +43,7 @@ hue-6-2: #e6c07b
   .hljs-formula {
     color: #c678dd;
   }
-  
+   
   .hljs-section,
   .hljs-name,
   .hljs-selector-tag,
@@ -98,4 +101,3 @@ hue-6-2: #e6c07b
   .hljs-link {
     text-decoration: underline;
   }
-  

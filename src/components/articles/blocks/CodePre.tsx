@@ -32,7 +32,7 @@ export const CodePre = ({ children }: { children: React.ReactNode }) => {
           )}
         </button>
       </div>
-      <pre ref={textInput} className="py-2 px-5">
+      <pre ref={textInput} className="py-2 px-5 bg-[#0d1117]">
         {children}
       </pre>
     </div>
