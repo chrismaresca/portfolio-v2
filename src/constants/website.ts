@@ -112,9 +112,9 @@ export type Venture = {
 export const VENTURES: Venture[] = [
   {
     id: 1,
-    title: "AI Arch",
-    subtitle: "AI Consultancy Built For Founders",
-    href: "https://www.architects.dev/",
+    title: "Ares AI",
+    subtitle: "AI For Personal Injury Lawyers",
+    href: "https://areslegal.ai/",
     target: "_blank",
     badge: "Founder",
   },
@@ -220,9 +220,20 @@ export const PROJECTS_DEFAULT_METADATA = {
 
 export const PROJECTS: Project[] = [
   {
+    id: 0,
+    title: "Ares AI",
+    subtitle: "Vertical AI agent for personal injury lawyers. Co-founded with Karn Rahal, we've rapidly gained traction, securing three demo clients within our first week of launch.",
+    projectUrl: "https://areslegal.ai/",
+    target: "_blank",
+    dateCreated: new Date("2025-02-20"),
+    dateUpdated: new Date("2025-02-20"),
+    delay: 0,
+  },
+  {
     id: 1,
     title: "AI First CMS Platform",
-    subtitle: "Engineered a frontend dashboard and REST API using Next.js to centralize content creation and management with an AI-first approach. The platform includes a built-in markdown editor powered by TipTap, leveraging TipTap's AI features to capture and replicate user-specific writing styles, significantly accelerating content development. It also implements custom agentic web scrapers for knowledge retrieval and resource aggregation, streamlining the content generation process. Integrated with APIs from major blog providers (Medium, LinkedIn, Dev.to) to enable efficient distribution across multiple platforms.",
+    subtitle:
+      "Engineered a frontend dashboard and REST API using Next.js to centralize content creation and management with an AI-first approach. The platform includes a built-in markdown editor powered by TipTap, leveraging TipTap's AI features to capture and replicate user-specific writing styles, significantly accelerating content development. It also implements custom agentic web scrapers for knowledge retrieval and resource aggregation, streamlining the content generation process. Integrated with APIs from major blog providers (Medium, LinkedIn, Dev.to) to enable efficient distribution across multiple platforms.",
     projectUrl: "https://github.com/chrismaresca/AI-CMS-API-LIVE",
     target: "_blank",
     dateCreated: new Date("2024-12-20"),
@@ -232,7 +243,8 @@ export const PROJECTS: Project[] = [
   {
     id: 2,
     title: "Jarvis v2",
-    subtitle: "Built a CLI tool that lets me control my computer with voice commands using OpenAI’s Real-Time API. It’s tailored for coding workflows like running shell commands, web scraping documentation, and saving it in an AI-friendly markdown format, as well as file and directory creation. Designed with a modular structure, it’s ready for adding more tools in future iterations. I also integrated the audio buffer mechanism from my Twilio Phone Assistant, ensuring smooth and responsive voice interactions, even when I interrupt the AI mid-task.",
+    subtitle:
+      "Built a CLI tool that lets me control my computer with voice commands using OpenAI’s Real-Time API. It’s tailored for coding workflows like running shell commands, web scraping documentation, and saving it in an AI-friendly markdown format, as well as file and directory creation. Designed with a modular structure, it’s ready for adding more tools in future iterations. I also integrated the audio buffer mechanism from my Twilio Phone Assistant, ensuring smooth and responsive voice interactions, even when I interrupt the AI mid-task.",
     projectUrl: "https://github.com/chrismaresca/jarvis-v2",
     target: "_blank",
     dateCreated: new Date("2024-10-25"),
@@ -262,7 +274,8 @@ export const PROJECTS: Project[] = [
   {
     id: 5,
     title: "AI Slide Creation Workflow",
-    subtitle: "Developed an automated pipeline for generating tailored slide deck content from meeting transcripts and AI-generated notes (via Circleback.ai). Leveraged LlamaIndex with Pydantic output parsing, implemented prior to OpenAI's structured output response model. Built with FastAPI and Jinja2 templates for prompt templating, the system enables efficient slide content generation. The use of Jinja2 allows for highly flexible prompt injection, offering extensive customization to adapt outputs to specific requirements.",
+    subtitle:
+      "Developed an automated pipeline for generating tailored slide deck content from meeting transcripts and AI-generated notes (via Circleback.ai). Leveraged LlamaIndex with Pydantic output parsing, implemented prior to OpenAI's structured output response model. Built with FastAPI and Jinja2 templates for prompt templating, the system enables efficient slide content generation. The use of Jinja2 allows for highly flexible prompt injection, offering extensive customization to adapt outputs to specific requirements.",
     projectUrl: "https://github.com/chrismaresca/simpleLLMworkflow",
     target: "_blank",
     dateCreated: new Date("2024-11-15"),
@@ -300,6 +313,5 @@ export const PROJECTS: Project[] = [
     delay: 700,
   },
 ];
-
 
 // export const LOCATION_
