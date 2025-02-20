@@ -221,12 +221,23 @@ export const PROJECTS_DEFAULT_METADATA = {
 export const PROJECTS: Project[] = [
   {
     id: 0,
-    title: "Ares AI",
+    title: "Ares",
     subtitle: "Vertical AI agent for personal injury lawyers. Co-founded with Karn Rahal, we've rapidly gained traction, securing three demo clients within our first week of launch.",
     projectUrl: "https://areslegal.ai/",
     target: "_blank",
     dateCreated: new Date("2025-02-20"),
     dateUpdated: new Date("2025-02-20"),
+    delay: 0,
+  },
+  {
+    id: 12,
+    title: "Astral AI",
+    subtitle:
+      "I hate current AI frameworks. I'm building my own to scratch my own itch. I'm also releasing the source code to the public. I'm not sure if it'll be useful to anyone, but I'm putting it out there anyway.",
+    projectUrl: "https://github.com/chrismaresca/Astral-AI",
+    target: "_blank",
+    dateCreated: new Date("2025-02-19"),
+    dateUpdated: new Date("2025-02-19"),
     delay: 0,
   },
   {
@@ -254,7 +265,7 @@ export const PROJECTS: Project[] = [
   {
     id: 3,
     title: "Architects.dev",
-    subtitle: "A landing page for my AI consultancy business that I'm launching with a fellow engineer, built from scratch within a couple of hours using Next.js, Tailwind CSS, Framer Motion, and Rombo's Tailwind motion library.",
+    subtitle: "A landing page for an AI consultancy business I launched with Karn Rahal prior to our discovery of Ares, which we now decided to go all in on. This was built from scratch within a couple of hours using Next.js, Tailwind CSS, Framer Motion, and Rombo's Tailwind motion library.",
     projectUrl: "https://www.architects.dev/",
     target: "_blank",
     dateCreated: new Date("2024-12-18"),
